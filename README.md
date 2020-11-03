@@ -26,7 +26,11 @@ A pasta "templates", deverá ser mantida como subdiretorio do Projeto, caso cont
 Utilizei o framework Bootstrap==4.3.1.
 
 Obrigado,
+
 Reinaldo
+
 Contato: 11 99562-8125
+
 e-mail: reinaldo_04@hotmail.com
+
 LinkedIn: https://www.linkedin.com/in/reinaldo-nobrega-265b7898/
