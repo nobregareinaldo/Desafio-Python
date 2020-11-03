@@ -1,0 +1,321 @@
+{
+	"info": {
+		"_postman_id": "ea6c49ff-fd6c-4ac5-bc12-debbbe5e23b0",
+		"name": "Projeto Fullstack",
+		"description": "Projeto Fullstack",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Incluir clientes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente_nome\":\"Reinaldo\", \r\n    \"cliente_sobrenome\":\"Nobrega\",\r\n    \"cliente_email\":\"reinaldo_04@hotmail.com\",\r\n    \"cliente_end_com\":\"Rua Dr Rubens Meireles, 235 - Apto 177\",\r\n    \"cliente_end_res\":\"Rua Amauri, 227 - Jd Europa\",\r\n    \"cliente_pais\":\"Brasil\",\r\n    \"cliente_estado\":\"São Paulo\",\r\n    \"cliente_cidade\":\"São Paulo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/clientes",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"clientes"
+							]
+						},
+						"description": "Incluir clientes"
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar cliente pelo ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente_id\":\"38\",\r\n    \"cliente_nome\":\"Reinaldo - ATUALIZADO\", \r\n    \"cliente_sobrenome\":\"Nobrega - ATUALIZADO\",\r\n    \"cliente_email\":\"reinaldo_04@hotmail.com\",\r\n    \"cliente_end_com\":\"Rua Dr Rubens Meireles, 235 - Apto 177\",\r\n    \"cliente_end_res\":\"Rua Amauri, 227 - Jd Europa\",\r\n    \"cliente_pais\":\"Brasil\",\r\n    \"cliente_estado\":\"São Paulo\",\r\n    \"cliente_cidade\":\"São Paulo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/clientes/atualizar",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"clientes",
+								"atualizar"
+							]
+						},
+						"description": "Atualizar cliente pelo ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/clientes",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"clientes"
+							]
+						},
+						"description": "Listar todos os clientes"
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar cliente por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/clientes/39",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"clientes",
+								"39"
+							]
+						},
+						"description": "Consultar cliente por ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Cliente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/clientes/excluir/39",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"clientes",
+								"excluir",
+								"39"
+							]
+						},
+						"description": "Excluir Cliente"
+					},
+					"response": []
+				}
+			],
+			"description": "Clientes",
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Pedidos",
+			"item": [
+				{
+					"name": "Incluir pedidos",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cliente_id\":38,\r\n    \"pedido_data\":\"2020-10-31\",\r\n    \"pedido_status\":1,\r\n    \"pedido_valor\":458.95\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/pedidos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"pedidos"
+							]
+						},
+						"description": "Incluir pedidos"
+					},
+					"response": []
+				},
+				{
+					"name": "Atualizar pedido pelo ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pedido_id\":11,\r\n    \"cliente_id\":38,\r\n    \"pedido_data\":\"2020-10-31\",\r\n    \"pedido_status\":2,\r\n    \"pedido_valor\":456.78\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:5000/pedidos/atualizar",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"pedidos",
+								"atualizar"
+							]
+						},
+						"description": "Atualizar pedido pelo ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Listar Pedidos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/pedidos",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"pedidos"
+							]
+						},
+						"description": "Listar todos os pedidos"
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar pedido por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/pedidos/11",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"pedidos",
+								"11"
+							]
+						},
+						"description": "Consultar pedido por ID"
+					},
+					"response": []
+				},
+				{
+					"name": "Excluir Pedido",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:5000/pedidos/excluir/10",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "5000",
+							"path": [
+								"pedidos",
+								"excluir",
+								"10"
+							]
+						},
+						"description": "Excluir Pedido"
+					},
+					"response": []
+				}
+			],
+			"description": "Pedidos",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "f5fdeb23-6ba5-4515-ab5f-b2d01d303256",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "c4f9f6a6-74e8-4f1d-88f0-381ab6f00299",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
