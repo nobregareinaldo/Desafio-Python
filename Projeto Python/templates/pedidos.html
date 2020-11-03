@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Menu - Pedidos{% endblock %}
+{% block content %}
+<style>body{background: white}</style>
+<div style="border-style:solid; border-color:#fc8b0a; border-top-width: 2px"></div>
+<div style="color: #890d7a; margin: 70px; line-height: 1.5; text-align:center">
+    <h2>Lista de pedidos:</h2>
+</div>
+<table class="table table-bordered table-hover table-sm">
+    <caption>Lista de pedidos</caption>
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Pedido</th>
+        <th scope="col">Cliente</th>
+        <th scope="col">Data do Pedido</th>
+        <th scope="col">Valor</th>
+        <th scope="col">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for row in rows %}
+      <tr>
+        <td>{{ row['pedido_id'] }}</td>
+        <td>{{ row['cliente_nome'] + " " + row['cliente_sobrenome']  }}</td>
+        <td>{{ row['pedido_data'] }}</td>
+        <td>R$ {{ row['pedido_valor'] }}</td>
+        {% if row['pedido_status'] == 1 %}
+        <td>Novo</td>
+        {% elif row['pedido_status'] == 2 %}
+        <td>Pendente</td>
+        {% else %}
+        <td>Entregue</td>
+        {% endif %}
+      </tr>
+        {%  endfor %}
+
+    </tbody>
+  </table>
+
+{% endblock %}
