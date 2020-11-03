@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Menu - Clientes{% endblock %}
+{% block content %}
+<style>body{background: white}</style>
+<div style="border-style:solid; border-color:#fc8b0a; border-top-width: 2px"></div>
+<div style="color: #890d7a; margin: 70px; line-height: 1.5; text-align:center">
+    <h2>Lista de clientes:</h2>
+</div>
+<table class="table table-bordered table-hover table-sm">
+    <caption>Lista de clientes</caption>
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Codigo</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Sobrenome</th>
+        <th scope="col">Email</th>
+        <th scope="col">Endereço comercial</th>
+        <th scope="col">Endereço residencial</th>
+        <th scope="col">Cidade</th>
+        <th scope="col">Estado</th>
+        <th scope="col">Pais</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for row in rows %}
+      <tr>
+        <td>{{ row['cliente_id'] }}</td>
+        <td>{{ row['cliente_nome'] }}</td>
+        <td>{{ row['cliente_sobrenome'] }}</td>
+        <td>{{ row['cliente_email'] }}</td>
+        <td>{{ row['cliente_end_com'] }}</td>
+        <td>{{ row['cliente_end_res'] }}</td>
+        <td>{{ row['cliente_estado'] }}</td>
+        <td>{{ row['cliente_cidade'] }}</td>
+        <td>{{ row['cliente_pais'] }}</td>
+      </tr>
+        {%  endfor %}
+    </tbody>
+  </table>
+
+{% endblock %}

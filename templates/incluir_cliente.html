@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block title %}Menu{% endblock %}
+{% block content %}
+<style>body{background: white}</style>
+<div style="border-style:solid; border-color:#fc8b0a; border-top-width: 2px"></div>
+
+<div class="container" style="color: #514e53">
+    <div class="py-5 text-center">
+      <h2>Cadastro de clientes</h2>
+      <p class="lead">Por favor, entre com os dados do cliente.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 order-md-1 ">
+          <h4  class="mb-3">Dados do cliente</h4>
+          <form action="#" method="POST" class="needs-validation" novalidate>
+            <div class="row">
+              <div class="col-md-6 mb-3">
+                <label for="firstName">Primeiro nome</label>
+                <input type="text" class="form-control" name="cliente_nome" placeholder="Seu nome" value="" required>
+                <div class="invalid-feedback">
+                  Favor fornecer o seu primeiro nome.
+                </div>
+              </div>
+              <div class="col-md-6 mb-3">
+                <label for="lastName">Sobrenome</label>
+                <input type="text" class="form-control" name="cliente_sobrenome" placeholder="Seu sobrenome" value="" required>
+                <div class="invalid-feedback">
+                  Favor fornecer o seu sobrenome.
+                </div>
+              </div>
+            </div>
+    
+            <div class="mb-3">
+              <label for="email">Email <span class="text-muted">(Obrigatório)</span></label>
+              <input type="email" class="form-control" name="cliente_email" placeholder="seunome@exemplo.com">
+              <div class="invalid-feedback">
+                Favor fornecer email válido.
+              </div>
+            </div>
+    
+            <div class="mb-3">
+              <label for="address">Endereço comercial</label>
+              <input type="text" class="form-control" name="cliente_end_com" placeholder="Rua Amauri, 227 - Jd Europa" required>
+              <div class="invalid-feedback">
+                Favor fornecer o endereço comercial.
+              </div>
+            </div>
+    
+            <div class="mb-3">
+              <label for="address2">Endereço residencial <span class="text-muted">(Opcional)</span></label>
+              <input type="text" class="form-control" name="cliente_end_res" placeholder="Rua Amauri, 227 - Jd Europa">
+            </div>
+    
+            <div class="row">
+              <div class="col-md-5 mb-3">
+                <label for="country">País</label>
+                <select class="custom-select d-block w-100" name="cliente_pais" required>
+                  <option value="">Selecionar...</option>
+                  <option>Brasil</option>
+                </select>
+                <div class="invalid-feedback">
+                  Favor fornecer um país válido.
+                </div>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="state">Estado</label>
+                <select class="custom-select d-block w-100" name="cliente_estado" required>
+                  <option value="">Selecionar...</option>
+                  <option>São Paulo</option>
+                </select>
+                <div class="invalid-feedback">
+                  Favor fornecer um estado válido.
+                </div>
+              </div>
+              <div class="col-md-3 mb-3">
+                <label for="zip">Cidade</label>
+                <input type="text" class="form-control" name="cliente_cidade" placeholder="Sua Cidade" required>
+                <div class="invalid-feedback">
+                  Favor fornecer sua cidade.
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary btn-lg btn-block" type="submit" value="submit">Salvar</button>
+          </form>
+        </div>
+      </div>
+
+      <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2016-2020 Menu</p>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://menu.com.br/politica-de-privacidade">Privacy</a></li>
+          <li class="list-inline-item"><a href="https://menu.com.br/termos-e-condicoes">Terms</a></li>
+          <li class="list-inline-item"><a href="https://menu.com.br/contact/">Support</a></li>
+        </ul>
+      </footer>
+</div>
+
+{% endblock %}
