@@ -18,4 +18,5 @@ Gerenciador de Banco de Dados:
 
 Disponibilizei uma coleção chamada Projeto Fullstack, no Postman.
   Arquivo - "Projeto Fullstack.postman_collection.json"
+
 Nessa coleção estão configuradas as requests (GET, POST, PUT, DELETE), para execução dos testes dos recursos "Pedidos" e "Clientes"
